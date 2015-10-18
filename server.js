@@ -1,19 +1,17 @@
 var express = require('express');
-var handlebars = require('experess-handlebars');
+var handlebars = require('express-handlebars');
 
 
 var app = express();
 
+app.set('port',process.env.PORT || 3000);
 
-//setup handlebars
 
-// setup handlebars
+// setup handlebars 
 var view = handlebars.create({ defaultLayout: 'main' });
 app.engine('handlebars', view.engine);
 app.set('view engine', 'handlebars');
 
-// setup static serving
-app.use(express.static(__dirname + '/public'));
 
 //call to home handlebars to show homepage
 
