@@ -15,6 +15,14 @@ app.set('view engine', 'handlebars');
 // setup static serving
 app.use(express.static(__dirname + '/public'));
 
+//call to home handlebars to show homepage
+
+app.get('/',(req, res) =>{
+
+	res.render('home');
+});
+
+//Error routes
 
 app.use((req, res) => {
         res.status(404);
