@@ -20,6 +20,10 @@ app.get('/',(req, res) =>{
 	res.render('home');
 });
 
+app.get('/team',(req,res)=>{
+	res.render('team');
+});
+
 //Error routes
 
 app.use((req, res) => {
